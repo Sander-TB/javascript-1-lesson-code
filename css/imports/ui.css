@@ -1,0 +1,9 @@
+.btn-secondary {
+    background-color: var(--grey);
+    margin-right: 5px;
+}
+
+.btn-secondary.active {
+    background-color: var(--primary-colour) !important;
+    border-color: var(--primary-colour) !important;
+}
