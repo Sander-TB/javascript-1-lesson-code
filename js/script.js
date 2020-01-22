@@ -1,4 +1,11 @@
-function loadGames() {
+const loadActionGamesButton = document.querySelector("#action");
+
+loadActionGamesButton.addEventListener("click", loadGames);
+
+function loadGames(event) {
+
+    console.dir(event.target);
+
     const container = document.querySelector(".container.results");
     let newHTML = "";
 
