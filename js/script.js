@@ -1,32 +1,54 @@
-const loadActionGamesButton = document.querySelector("#action");
+// select all the buttons by their classes
+const buttons = document.querySelectorAll(".btn.btn-secondary");
 
-loadActionGamesButton.addEventListener("click", loadGames);
+// loop through each button and add an event listener
+for(let i =0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", loadGames);
+}
 
+// add an argument called event to the func
 function loadGames(event) {
 
-    console.dir(event.target);
+    // assign the value of the button id to buttonId
+    const buttonId = event.target.id;
+
+    // declare a variable that will hold a different value depending on the button clicked
+    let arrayToLoopThrough = [];
+
+    if(buttonId === "action") {
+        // if the button with the id of "action" is clicked, assign actionGames to arrayToLoopThrough
+        arrayToLoopThrough = actionGames;
+    }
+    else if (buttonId === "shooter") {
+        // if the button with the id of "shooter" is clicked, assign shooterGames to arrayToLoopThrough
+        arrayToLoopThrough = shooterGames;
+    }
+    else if (buttonId === "rpg") {
+        // if the button with the id of "rpg" is clicked, assign rpgGames to arrayToLoopThrough
+        arrayToLoopThrough = rpgGames;
+    }
 
     const container = document.querySelector(".container.results");
     let newHTML = "";
 
-    for (let i = 0; i < actionGames.length; i++) {
+    for (let i = 0; i < arrayToLoopThrough.length; i++) {
 
         let ratingValue = "Not rated";
 
-        if (actionGames[i].rating) {
-            ratingValue = actionGames[i].rating;
+        if (arrayToLoopThrough[i].rating) {
+            ratingValue = arrayToLoopThrough[i].rating;
         }
 
-        const genres = actionGames[i].genres;
+        const genres = arrayToLoopThrough[i].genres;
         const genresHTML = makeGenres(genres);
 
-        const platforms = actionGames[i].platforms;
+        const platforms = arrayToLoopThrough[i].platforms;
         const platformsHTML = makePlatforms(platforms);
 
         const details = `<div class="card">
-                            <div class="image" style="background-image: url(${actionGames[i].background_image});"></div>
+                            <div class="image" style="background-image: url(${arrayToLoopThrough[i].background_image});"></div>
                             <div class="details">
-                                <h4 class="name">${actionGames[i].name}</h4>
+                                <h4 class="name">${arrayToLoopThrough[i].name}</h4>
                                 <div class="rating">${ratingValue}</div>
                                 ${genresHTML}
                                 <div class="platforms">${platformsHTML}</div>
