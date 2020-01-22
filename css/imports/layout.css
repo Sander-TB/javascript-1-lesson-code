@@ -1,9 +1,17 @@
 body {
     background: #e8e8e8;
     font-family: "Open Sans", sans-serif;
+    padding-top: 40px;
 }
 
 .container {
+    margin-top: 40px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container.results {
+    margin-top: 40px;
     display: flex;
     flex-flow: row wrap;
 }
