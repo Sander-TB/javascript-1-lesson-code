@@ -11,11 +11,9 @@
     box-shadow: none;
 }
 
-
 .btn-secondary:active:focus {
     box-shadow: none;
 }
-
 
 .btn-secondary.active {
     background-color: var(--primary-colour) !important;
