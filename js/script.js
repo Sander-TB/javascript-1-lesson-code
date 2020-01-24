@@ -1,31 +1,32 @@
-// select all the buttons by their classes
 const buttons = document.querySelectorAll(".btn.btn-secondary");
 
-// loop through each button and add an event listener
 for(let i =0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", loadGames);
 }
 
-// add an argument called event to the func
 function loadGames(event) {
 
-    // assign the value of the button id to buttonId
-    const buttonId = event.target.id;
+    // get genre value from the data-genre attribute
+    const genre = event.target.dataset.genre;
+   
+    let arrayToLoopThrough;
 
-    // declare a variable that will hold a different value depending on the button clicked
-    let arrayToLoopThrough = [];
+    switch(genre) {
 
-    if(buttonId === "action") {
-        // if the button with the id of "action" is clicked, assign actionGames to arrayToLoopThrough
-        arrayToLoopThrough = actionGames;
-    }
-    else if (buttonId === "shooter") {
-        // if the button with the id of "shooter" is clicked, assign shooterGames to arrayToLoopThrough
-        arrayToLoopThrough = shooterGames;
-    }
-    else if (buttonId === "rpg") {
-        // if the button with the id of "rpg" is clicked, assign rpgGames to arrayToLoopThrough
-        arrayToLoopThrough = rpgGames;
+        case "action":
+            arrayToLoopThrough = actionGames;
+            break;
+
+        case "shooter":
+            arrayToLoopThrough = shooterGames;
+            break;
+
+        case "rpg":
+            arrayToLoopThrough = rpgGames;
+            break;
+        
+        default:
+            arrayToLoopThrough = [];
     }
 
     const container = document.querySelector(".container.results");
