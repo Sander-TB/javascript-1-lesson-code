@@ -56,13 +56,14 @@ function loadGames(event) {
     container.innerHTML = newHTML;
 }
 
+
 function makeGenres(genreArray) {
 
     let genreHTML = "";
 
-    for (let i = 0; i < genreArray.length; i++) {
-        genreHTML += `<a class="genre">${genreArray[i].name}</a>`;
-    }
+    genreArray.forEach(function(genre) {
+        genreHTML += `<a class="genre">${genre.name}</a>`;
+    });
 
     return genreHTML;
 }
