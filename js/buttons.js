@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll(".btn.btn-secondary");
 
 for(let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", mimicLoadTime);
+    buttons[i].addEventListener("click", loadGames);
     buttons[i].addEventListener("click", handleActiveClass);
 }
 
@@ -17,9 +17,9 @@ function handleActiveClass(event) {
 const timeoutContainer = document.querySelector("div.timeout");
 const timeoutButton = document.querySelector("button.timeout");
 
-timeoutButton.addEventListener("click", updateDivByButtonClick);
+timeoutButton.addEventListener("click", updateDivAfterClick);
 
-function updateDivByButtonClick() {
+function updateDivAfterClick() {
     timeoutContainer.innerText = "";
     timeoutContainer.classList.add("loader");
 
