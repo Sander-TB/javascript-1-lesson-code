@@ -13,18 +13,3 @@ function handleActiveClass(event) {
 
     event.target.classList.add("active");
 }
-
-const timeoutContainer = document.querySelector("div.timeout");
-const timeoutButton = document.querySelector("button.timeout");
-
-timeoutButton.addEventListener("click", updateDivAfterClick);
-
-function updateDivAfterClick() {
-    timeoutContainer.innerText = "";
-    timeoutContainer.classList.add("loader");
-
-    setTimeout(function() {
-        timeoutContainer.innerText = "Loaded";
-        timeoutContainer.classList.remove("loader");
-    }, 3000);
-}

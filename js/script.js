@@ -1,12 +1,10 @@
 function loadGames(event) {
-
     // get genre value from the data-genre attribute
     const genre = event.target.dataset.genre;
-   
+
     let arrayToLoopThrough;
 
-    switch(genre) {
-
+    switch (genre) {
         case "action":
             arrayToLoopThrough = actionGames;
             break;
@@ -18,7 +16,7 @@ function loadGames(event) {
         case "rpg":
             arrayToLoopThrough = rpgGames;
             break;
-        
+
         default:
             arrayToLoopThrough = [];
     }
@@ -27,7 +25,6 @@ function loadGames(event) {
     let newHTML = "";
 
     for (let i = 0; i < arrayToLoopThrough.length; i++) {
-
         let ratingValue = "Not rated";
 
         if (arrayToLoopThrough[i].rating) {
@@ -56,9 +53,7 @@ function loadGames(event) {
     container.innerHTML = newHTML;
 }
 
-
 function makeGenres(genreArray) {
-
     let genreHTML = "";
 
     genreArray.forEach(function(genre) {
@@ -69,7 +64,6 @@ function makeGenres(genreArray) {
 }
 
 function makePlatforms(platformsArray) {
-
     let platformsHTML = "";
 
     for (let i = 0; i < platformsArray.length; i++) {

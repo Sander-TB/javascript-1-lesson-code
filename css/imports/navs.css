@@ -1,0 +1,8 @@
+.navbar-brand {
+    font-family: "Exo 2", sans-serif;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-colour) !important;
+    color: white !important;
+}
