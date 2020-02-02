@@ -8,5 +8,8 @@ function loadPage() {
 }
 
 genreLinks.forEach(link => {
+    if (genres === link.dataset.genre) {
+        link.classList.add("active");
+    }
     link.addEventListener("click", loadPage);
 });
