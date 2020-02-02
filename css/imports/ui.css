@@ -1,4 +1,5 @@
-.container a {
+.container a,
+footer a {
     color: var(--primary-colour) !important;
 }
 

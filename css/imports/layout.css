@@ -1,6 +1,19 @@
 body {
     background: #e8e8e8;
     font-family: "Open Sans", sans-serif;
+    margin-bottom: 40px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    text-align: center;
+    color: var(--footer) !important;
+    font-size: 12px;
 }
 
 .container {
