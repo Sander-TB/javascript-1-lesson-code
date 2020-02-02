@@ -1,46 +1,24 @@
-function loadGames(event) {
-    // get genre value from the data-genre attribute
-    const genre = event.target.dataset.genre;
-
-    let arrayToLoopThrough;
-
-    switch (genre) {
-        case "action":
-            arrayToLoopThrough = actionGames;
-            break;
-
-        case "shooter":
-            arrayToLoopThrough = shooterGames;
-            break;
-
-        case "rpg":
-            arrayToLoopThrough = rpgGames;
-            break;
-
-        default:
-            arrayToLoopThrough = [];
-    }
-
-    const container = document.querySelector(".container.results");
+function loadGames(data) {
+    const container = document.querySelector(".results");
     let newHTML = "";
 
-    for (let i = 0; i < arrayToLoopThrough.length; i++) {
+    for (let i = 0; i < games.length; i++) {
         let ratingValue = "Not rated";
 
-        if (arrayToLoopThrough[i].rating) {
-            ratingValue = arrayToLoopThrough[i].rating;
+        if (games[i].rating) {
+            ratingValue = games[i].rating;
         }
 
-        const genres = arrayToLoopThrough[i].genres;
+        const genres = games[i].genres;
         const genresHTML = makeGenres(genres);
 
-        const platforms = arrayToLoopThrough[i].platforms;
+        const platforms = games[i].platforms;
         const platformsHTML = makePlatforms(platforms);
 
         const details = `<div class="card">
-                            <div class="image" style="background-image: url(${arrayToLoopThrough[i].background_image});"></div>
+                            <div class="image" style="background-image: url(${games[i].background_image});"></div>
                             <div class="details">
-                                <h4 class="name">${arrayToLoopThrough[i].name}</h4>
+                                <h4 class="name">${games[i].name}</h4>
                                 <div class="rating">${ratingValue}</div>
                                 ${genresHTML}
                                 <div class="platforms">${platformsHTML}</div>
