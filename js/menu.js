@@ -1,15 +1,12 @@
-const buttons = document.querySelectorAll(".btn.btn-secondary");
+const genreLinks = document.querySelectorAll(".genres a");
 
-for(let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", loadGames);
-    buttons[i].addEventListener("click", handleActiveClass);
+function loadPage() {
+    const genre = this.dataset.genre;
+    const pageToReload = "index.html?genres=" + genre;
+
+    document.location.href = pageToReload;
 }
 
-function handleActiveClass(event) {
-
-    for(let i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove("active");
-    }
-
-    event.target.classList.add("active");
-}
+genreLinks.forEach(link => {
+    link.addEventListener("click", loadPage);
+});
