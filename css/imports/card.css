@@ -48,6 +48,12 @@
     border: var(--primary-colour);
     background: var(--primary-colour);
     color: white !important;
+    text-decoration: none;
+}
+
+.genre.active {
+    background: var(--primary-colour);
+    color: white !important;
 }
 
 .platforms {

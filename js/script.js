@@ -34,23 +34,3 @@ function loadGames(json) {
 
     container.innerHTML = newHTML;
 }
-
-function makeGenres(genreArray) {
-    let genreHTML = "";
-
-    genreArray.forEach(function(genre) {
-        genreHTML += `<a class="genre">${genre.name}</a>`;
-    });
-
-    return genreHTML;
-}
-
-function makePlatforms(platformsArray) {
-    let platformsHTML = "";
-
-    for (let i = 0; i < platformsArray.length; i++) {
-        platformsHTML += `<span>${platformsArray[i].platform.name}</span>`;
-    }
-
-    return platformsHTML;
-}
