@@ -1,4 +1,4 @@
-function loadGames(data) {
+function loadGames() {
     const container = document.querySelector(".results");
     let newHTML = "";
 
