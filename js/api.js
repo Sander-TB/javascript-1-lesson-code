@@ -24,6 +24,6 @@ fetch(genreUrl)
 
 const genreHeading = document.querySelector("h1");
 
-const formattadGenres = genres.replace(/-/g, " ").replace(" rpg", "");
+const formattedGenres = genres.replace(/-/g, " ").replace(" rpg", "");
 
-genreHeading.innerText = formattadGenres;
+genreHeading.innerText = formattedGenres;
