@@ -56,11 +56,16 @@ function createDetails(details) {
     releaseDate.className = "details-date";
     releaseDate.innerText = `Released: ${details.released}`;
 
+    // insert the release date before the description
     description.before(releaseDate);
 
+    // add the genre links using the exising function
     const genres = document.createElement("div");
     genres.className = "details-genres";
     genres.innerHTML = makeGenres(details.genres);
 
     container.appendChild(genres);
+
+    // change the page title
+    document.title = details.name + " | " + document.title;
 }
