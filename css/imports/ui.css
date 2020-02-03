@@ -3,6 +3,17 @@ footer a {
     color: var(--primary-colour) !important;
 }
 
+.error {
+    border: 1px solid var(--primary-colour);
+    color: var(--primary-colour);
+    background: var(--light-grey);
+    padding: 1em;
+}
+
+.error:after {
+    content: "An error occurred.";
+}
+
 .loader {
     border: 16px solid #f3f3f3;
     border-top: 16px solid var(--primary-colour);

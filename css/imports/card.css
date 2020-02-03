@@ -5,7 +5,18 @@
     margin-bottom: 30px;
 }
 
-.details {
+.card a.details {
+    margin-top: 0.5em;
+    background-color: var(--grey) !important;
+    color: white !important;
+}
+
+.card a.details:hover {
+    background-color: var(--light-grey) !important;
+    color: var(--grey) !important;
+}
+
+.card div.details {
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1.25rem;
@@ -58,6 +69,7 @@
 
 .platforms {
     margin-top: 0.75em;
+    margin-bottom: 0.75em;
 }
 
 .platforms span {
