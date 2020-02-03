@@ -23,4 +23,7 @@ fetch(genreUrl)
     });
 
 const genreHeading = document.querySelector("h1");
-genreHeading.innerText = genres;
+
+const formattadGenres = genres.replace("-", " ");
+
+genreHeading.innerText = formattadGenres;
