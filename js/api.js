@@ -21,3 +21,6 @@ fetch(genreUrl)
     .catch(function(error) {
         console.dir(error);
     });
+
+const genreHeading = document.querySelector("h1");
+genreHeading.innerText = genres;
