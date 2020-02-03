@@ -57,4 +57,10 @@ function createDetails(details) {
     releaseDate.innerText = `Released: ${details.released}`;
 
     description.before(releaseDate);
+
+    const genres = document.createElement("div");
+    genres.className = "details-genres";
+    genres.innerHTML = makeGenres(details.genres);
+
+    container.appendChild(genres);
 }
