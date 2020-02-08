@@ -25,6 +25,11 @@ footer a {
     transform: translateX(-50%);
 }
 
+.btn-primary {
+    background: var(--primary-colour) !important;
+    border-color: var(--primary-colour) !important;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
