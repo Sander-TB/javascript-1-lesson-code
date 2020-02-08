@@ -27,12 +27,6 @@ function validateForm(event) {
     } else {
         emailError.style.display = "block";
     }
-
-    if (validateEmail(emailValue) === true) {
-        invalidEmailError.style.display = "none";
-    } else {
-        invalidEmailError.style.display = "block";
-    }
 }
 
 function checkInputLength(value) {
@@ -45,9 +39,4 @@ function checkInputLength(value) {
     } else {
         return false;
     }
-}
-
-function validateEmail(email) {
-    var re = /\S+@\S+\.\S+/;
-    return re.test(email);
 }
