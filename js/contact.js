@@ -15,6 +15,16 @@ function validateForm(event) {
     } else {
         firstNameError.style.display = "block";
     }
+
+    const email = document.querySelector("#email");
+    const emailError = document.querySelector("#emailError");
+    const emailValue = email.value;
+
+    if (checkInputLength(emailValue) === true) {
+        emailError.style.display = "none";
+    } else {
+        emailError.style.display = "block";
+    }
 }
 
 function checkInputLength(value) {
