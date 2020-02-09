@@ -30,6 +30,10 @@ footer a {
     border-color: var(--primary-colour) !important;
 }
 
+.container a.btn-primary {
+    color: white !important;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);

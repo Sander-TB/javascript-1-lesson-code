@@ -43,6 +43,10 @@
     background-position: center top;
 }
 
+.image.creator {
+    height: 250px;
+}
+
 .genre {
     border: 1px solid var(--light-grey);
     font-size: 14px;
