@@ -24,6 +24,8 @@ function handleJson(json) {
 
         if (result.image) {
             imageUrl = result.image;
+        } else if (result.image_background) {
+            imageUrl = result.image_background;
         }
 
         html += `<div class="col-sm-6 col-md-4 col-lg-3">
