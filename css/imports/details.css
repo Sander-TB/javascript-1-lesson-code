@@ -26,3 +26,34 @@
     font-weight: bold;
     display: block;
 }
+
+.creator-details {
+    padding-top: 15px;
+}
+
+.creator-image {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.game-count {
+    color: var(--primary-colour);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (min-width: 600px) {
+    .creator-detail-container {
+        display: flex;
+    }
+
+    .creator-image {
+        margin-left: 0;
+        transform: translateX(0);
+    }
+
+    .creator-details {
+        padding-top: 0;
+        padding-left: 15px;
+    }
+}
