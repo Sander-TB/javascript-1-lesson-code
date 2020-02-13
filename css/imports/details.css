@@ -38,7 +38,13 @@
     align-self: self-start;
 }
 
-.game-count {
+.game-count,
+.reviews-count,
+<<<<<<< Updated upstream
+.ratings,
+=======
+>>>>>>> Stashed changes
+.rating-top {
     color: var(--primary-colour);
     font-weight: bold;
     font-size: 20px;
